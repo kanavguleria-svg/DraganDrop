@@ -6,3 +6,10 @@ The uploaded data can then be accessed from another machine, allowing for easy t
 To ensure the privacy and security of the data,
 The application is designed to automatically delete the uploaded files after a set period of time,
 In this case, the data is removed from the application's storage after 10 minutes, reducing the risk of unauthorized access or unintended data exposure.
+
+* this is not complete yet 
+* still under development
+
+
+
+
