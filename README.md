@@ -10,6 +10,8 @@ In this case, the data is removed from the application's storage after 10 minute
 * this is not complete yet 
 * still under development
 
+.........current staus 
+user can upload images and file and view them 
 
 
 
