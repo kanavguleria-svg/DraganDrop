@@ -1,0 +1,50 @@
+public static boolean  bfs(ArrayList<ArrayList<Integer>> adj, int src,
+int dest,int v, int pred[], int dist[])
+{
+	LinkedList<Integer> queue = new LinkedList<Integer>();
+	boolean visited[] = new boolean[v];
+	
+	// so what i am doing in this is that i am filling visited as false
+	// distance of all elements as infinite
+	// and pred for every one is -1;
+	for(int i=0;i<v;i++){
+	 visited[i] = false;
+	 dist[i] = Integer.MAX_VALUE;
+	 pred[i] = -1;
+	}
+	
+	//what is happening
+	// the src node is already visited and dist of src is 0 from itself
+	// and i will add the src in queue 
+	visited[src] = true;
+	dist[src] = 0;
+	queue.add(src);
+
+	now i will iterate from first element to other and 
+	pop the element and add the connected elements in the queue
+	and mark the poped elements in visited array as true 
+	so that they dont make a loop 
+	
+	while(!queue.isEmpty())
+	{
+		int cur = q.poll();
+		for(int i=0;i<adj.get(cur).size();i++)
+		{
+			int neighbour = adj.get(cur).get(i);
+			if(!visited[neighbour])
+			{
+				visited[neightbour] = true;
+				dist[neighbour] = dist[cur]+1;
+				pred[neightbour] = cur;
+				q.add(neighbour);
+				if(neighbour == dest)
+				return true;
+			}
+			
+		}
+	}
+	
+	return false;
+	
+
+}

@@ -12,6 +12,9 @@ exports.sendToken = async (user, statusCode, res) => {
 
 //REGISTER
 exports.registerContoller = async (req, res, next) => {
+  // console.log(req.body," yes i am called");
+  const { username, email, password } = req.body;
+
   try {
     const { username, email, password } = req.body;
     //exisitng user
@@ -29,6 +32,7 @@ exports.registerContoller = async (req, res, next) => {
 
 //LOGIN
 exports.loginController = async (req, res, next) => {
+  console.log(req.body);
   try {
     const { email, password } = req.body;
     //validation
